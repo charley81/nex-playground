@@ -4,12 +4,11 @@ import Link from 'next/link'
 
 export default function HomePage() {
   return (
-    <main className="">
-      <h1 className="text-7xl">Home Page</h1>
-      <Link href="/about" className="text-2xl block">
-        About Page
-      </Link>
-      <Button variant="default">Submit</Button>
+    <main>
+      <h1 className="text-4xl mb-4">Home Page</h1>
+      <Button variant="default" asChild>
+        <Link href="/clients">Get started</Link>
+      </Button>
     </main>
   )
 }
