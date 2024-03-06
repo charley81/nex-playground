@@ -8,11 +8,12 @@ export default function ClientPage() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="bg-muted shadow-xl p-4 rounded-md flex sm:justify-center">
+    <div className="bg-muted shadow-xl px-4 py-16 rounded-md flex sm:justify-center">
       <h1 className="text-2xl sm:text-4xl flex gap-2 items-center">
         Current count:
         <Button
           size="icon"
+          variant="default"
           onClick={() => {
             if (count >= 1) {
               setCount(count - 1)
@@ -22,7 +23,11 @@ export default function ClientPage() {
           <Minus />
         </Button>
         {count}
-        <Button size="icon" onClick={() => setCount(count + 1)}>
+        <Button
+          variant="default"
+          size="icon"
+          onClick={() => setCount(count + 1)}
+        >
           <Plus />
         </Button>
       </h1>
