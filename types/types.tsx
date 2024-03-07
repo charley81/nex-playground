@@ -1,10 +1,12 @@
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
+// nav
 export interface Ilink {
   href: string
   label: string
 }
 
+// drinks
 export interface IDrink {
   idDrink: string | null
   strDrink: string
@@ -57,4 +59,18 @@ export interface IDrink {
   strImageAttribution: string | null
   strCreativeCommonsConfirmed: string | null
   dateModified: string | null
+}
+
+// tasks
+export type TaskType = {
+  id: string
+  content: string
+  createdAt: Date
+  completed: boolean
+}
+
+export type TaskFormDataType = {
+  formData: {
+    content: string
+  }
 }
