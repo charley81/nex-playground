@@ -64,7 +64,7 @@ export interface IDrink {
 // tasks
 export type TaskType = {
   id: string
-  content: string | null
+  content: string
   createdAt: Date
   completed: boolean
 }

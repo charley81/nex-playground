@@ -1,4 +1,4 @@
-import DrinkList from '@/components/drink-list'
+import DrinkList from '@/components/drinks/drink-list'
 import { IDrink } from '@/types/types'
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=z'

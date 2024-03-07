@@ -12,7 +12,7 @@ export default async function TaskList() {
   return (
     <ul>
       {tasks.map((task: TaskType) => (
-        <li key={task.id}></li>
+        <li key={task.id}>{task.content}</li>
       ))}
     </ul>
   )

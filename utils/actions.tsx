@@ -12,11 +12,13 @@ export const getAllTasks = async () => {
 }
 
 export const createTask = async (formData: FormData) => {
-  const content = formData.get('content')
+  const content = formData.get('content') as string
+
   await prisma.task.create({
     data: {
       content
     }
   })
+
   revalidatePath('/tasks')
 }
