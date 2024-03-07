@@ -1,15 +1,16 @@
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+
 export interface Ilink {
   href: string
   label: string
 }
 
-
-export interface IDrink    {
+export interface IDrink {
   idDrink: string | null
-  strDrink: string | null
-  strDrinkAlternate: string | null,
-  strTags: null,
-  strVideo: null,
+  strDrink: string
+  strDrinkAlternate: string | null
+  strTags: null
+  strVideo: null
   strCategory: string | null
   strIBA: string | null
   strAlcoholic: string | null
@@ -21,7 +22,7 @@ export interface IDrink    {
   strInstructionsIT: string | null
   'strInstructionsZH-HANS': string | null
   'strInstructionsZH-HANT': string | null
-  strDrinkThumb: string | null
+  strDrinkThumb: string | StaticImport
   strIngredient1: string | null
   strIngredient2: string | null
   strIngredient3: string | null
@@ -56,4 +57,4 @@ export interface IDrink    {
   strImageAttribution: string | null
   strCreativeCommonsConfirmed: string | null
   dateModified: string | null
-},
+}

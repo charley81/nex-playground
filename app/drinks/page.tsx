@@ -1,6 +1,7 @@
+import DrinkList from '@/components/drink-list'
 import { IDrink } from '@/types/types'
 
-const url = 'https://www.hecocktaildb.com/api/json/v1/1/search.php?f=a'
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=z'
 
 const fetchDrinks = async () => {
   const response = await fetch(url)
@@ -12,11 +13,8 @@ export default async function DrinksPage() {
   const drinksDataByLetterA = await fetchDrinks()
 
   return (
-    <div>
-      <h1 className="text-4xl">Drinks page</h1>
-      {drinksDataByLetterA.drinks.map((item: IDrink) => (
-        <div key={item.idDrink}>{item.strDrink}</div>
-      ))}
+    <div className="mt-16">
+      <DrinkList drinks={drinksDataByLetterA.drinks} />
     </div>
   )
 }
